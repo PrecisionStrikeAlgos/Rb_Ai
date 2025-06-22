@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Range Brain AI 2.0 - User Manual</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background: white;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #2980b9;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 8px;
+            margin-top: 40px;
+            font-size: 1.8em;
+        }
+        
+        h3 {
+            color: #34495e;
+            margin-top: 30px;
+            font-size: 1.4em;
+        }
+        
+        h4 {
+            color: #7f8c8d;
+            margin-top: 25px;
+            font-size: 1.2em;
+        }
+        
+        h5 {
+            color: #95a5a6;
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+        
+        .subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            color: #7f8c8d;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+        
+        .toc {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #3498db;
+        }
+        
+        .toc h2 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        
+        .toc ol {
+            margin-left: 20px;
+        }
+        
+        .toc a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        
+        .parameter-box {
+            background: #f1f2f6;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .parameter-title {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .parameter-details {
+            margin-top: 8px;
+        }
+        
+        .parameter-details strong {
+            color: #e74c3c;
+        }
+        
+        .highlight-box {
+            background: #e8f5e8;
+            border: 1px solid #27ae60;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #27ae60;
+        }
+        
+        .warning-box {
+            background: #fef9e7;
+            border: 1px solid #f39c12;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #f39c12;
+        }
+        
+        .code-block {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background: #f8f9fa;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 2px solid #ecf0f1;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        
+        @media print {
+            body { margin: 0; }
+            h1, h2 { page-break-after: avoid; }
+            .parameter-box, .highlight-box, .warning-box { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Range Brain AI 2.0</h1>
+<div class="subtitle">Complete User Manual<br>Advanced Neural Network-Powered Range Breakout Trading System</div>
+
+<div class="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#system-requirements">System Requirements</a></li>
+        <li><a href="#installation-guide">Installation Guide</a></li>
+        <li><a href="#parameter-configuration">Parameter Configuration</a></li>
+        <li><a href="#neural-network-explained">Neural Network Explained</a></li>
+        <li><a href="#risk-management-guide">Risk Management Guide</a></li>
+        <li><a href="#visual-interface-guide">Visual Interface Guide</a></li>
+        <li><a href="#trading-strategy-overview">Trading Strategy Overview</a></li>
+        <li><a href="#optimization-guidelines">Optimization Guidelines</a></li>
+        <li><a href="#troubleshooting">Troubleshooting</a></li>
+        <li><a href="#best-practices">Best Practices</a></li>
+    </ol>
+</div>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Range Brain AI 2.0 is a sophisticated Expert Advisor that combines traditional range breakout strategies with cutting-edge neural network technology. Unlike conventional breakout systems, this EA employs a custom-built neural network that analyzes RSI patterns and moving average relationships to filter signals, dramatically improving trade quality and reducing false breakouts.</p>
+
+<h3>Key Features</h3>
+<ul>
+    <li><strong>Intelligent Range Detection</strong>: Precision time-based range identification with customizable periods</li>
+    <li><strong>Neural Network Signal Filtering</strong>: Advanced RSI pattern analysis with adaptive learning</li>
+    <li><strong>Professional Risk Management</strong>: Break-even protection, partial closes, and trailing stops</li>
+    <li><strong>Visual Range Display</strong>: Real-time range visualization with optional pulsing animations</li>
+    <li><strong>One-Trade-Per-Direction Logic</strong>: Prevents overtrading with maximum one high and one low breakout per day</li>
+</ul>
+
+<h3>How It Works</h3>
+<ol>
+    <li><strong>Range Establishment</strong>: The EA identifies price ranges during specified time periods</li>
+    <li><strong>Neural Network Analysis</strong>: Analyzes RSI patterns and moving average relationships</li>
+    <li><strong>Breakout Detection</strong>: Monitors for price breaks above/below established ranges</li>
+    <li><strong>Signal Validation</strong>: Neural network confirms or rejects breakout signals</li>
+    <li><strong>Trade Execution</strong>: Opens positions with comprehensive risk management</li>
+    <li><strong>Position Management</strong>: Applies break-even, partial closes, and trailing stops</li>
+</ol>
+
+<h2 id="system-requirements">System Requirements</h2>
+
+<h3>Platform Requirements</h3>
+<ul>
+    <li>MetaTrader 5 platform (build 3560 or higher)</li>
+    <li>Windows 10/11 or Windows Server 2016+</li>
+    <li>Minimum 4GB RAM (8GB recommended)</li>
+    <li>Stable internet connection</li>
+</ul>
+
+<h3>Broker Requirements</h3>
+<ul>
+    <li>ECN or STP broker (recommended for best spreads)</li>
+    <li>Minimum stop level ≤ 50 points</li>
+    <li>Allow algorithmic trading enabled</li>
+    <li>Hedging or netting account mode supported</li>
+</ul>
+
+<h3>Recommended Instruments</h3>
+<ul>
+    <li><strong>Primary</strong>: GBP/JPY - optimal volatility and range behavior</li>
+    <li><strong>Secondary</strong>: Major forex pairs (EURUSD, GBPUSD, USDJPY)</li>
+    <li><strong>Alternative</strong>: High-volatility indices (US30, NAS100, Gold)</li>
+</ul>
+
+<h3>Optimal Timeframes</h3>
+<ul>
+    <li><strong>M5</strong>: Best for frequent opportunities and quick ranges</li>
+    <li><strong>M15</strong>: Balanced approach with good signal quality</li>
+    <li><strong>M30</strong>: Conservative approach with fewer but higher-quality signals</li>
+</ul>
+
+<h2 id="installation-guide">Installation Guide</h2>
+
+<h3>Step 1: File Installation</h3>
+<ol>
+    <li>The Range Brain AI 2.0.ex5 will save to your terminal upon purchase</li>
+    <li>The EA will appear in the Navigator under Market</li>
+</ol>
+
+<h3>Step 2: Chart Setup</h3>
+<ol>
+    <li>Open your desired trading instrument chart</li>
+    <li>Set the appropriate timeframe (M5, M15, or M30 recommended)</li>
+    <li>Drag the Range Brain AI 2.0 EA onto the chart</li>
+    <li>Configure parameters in the input dialog</li>
+</ol>
+
+<h3>Step 3: Initial Configuration</h3>
+<ol>
+    <li>Set your risk percentage (recommended: 0.5-2%)</li>
+    <li>Configure range detection times for your trading session</li>
+    <li>Enable live trading and auto-trading in MetaTrader 5</li>
+    <li>Monitor the EA's first few operations to ensure proper function</li>
+</ol>
+
+<h2 id="parameter-configuration">Parameter Configuration</h2>
+
+<h3>General Settings</h3>
+
+<div class="parameter-box">
+    <div class="parameter-title">Unique Identifier for EA (InpMagic)</div>
+    <div class="parameter-details">
+        <strong>Default:</strong> 012345<br>
+        <strong>Purpose:</strong> Distinguishes this EA's trades from others<br>
+        <strong>Recommendation:</strong> Change if running multiple EAs on the same account<br>
+        <strong>Range:</strong> Any positive integer
+    </div>
+</div>
+
+<div class="parameter-box">
+    <div class="parameter-title">Comment for Trades (InpTradeComment)</div>
+    <div class="parameter-details">
+        <strong>Default:</strong> "Range Brain AI"<br>
+        <strong>Purpose:</strong> Adds identifying comment to all trades<br>
+        <strong>Recommendation:</strong> Keep default or customize for tracking<br>
+        <strong>Note:</strong> Useful for trade analysis and record keeping
+    </div>
+</div>
+
+<div class="parameter-box">
+    <div class="parameter-title">Cooldown Minutes Between Trades (tradeCooldownMinutes)</div>
+    <div class="parameter-details">
+        <strong>Default:</strong> 30 minutes<br>
+        <strong>Purpose:</strong> Prevents rapid-fire trading after position closure<br>
+        <strong>Recommendation:</strong> 15-60 minutes depending on volatility<br>
+        <strong>Higher Values:</strong> More conservative, fewer trades<br>
+        <strong>Lower Values:</strong> More aggressive, more frequent trading
+    </div>
+</div>
+
+<div class="parameter-box">
+    <div class="parameter-title">Enable Debug Messages (EnableDebugPrints)</div>
+    <div class="parameter-details">
+        <strong>Default:</strong> false<br>
+        <strong>Purpose:</strong> Shows detailed logging information<br>
+        <strong>Recommendation:</strong> Enable during initial setup and optimization<br>
+        <strong>Note:</strong> May slow performance if left enabled in live trading
+    </div>
+</div>
+
+<h3>Range Definition</h3>
+
+<div class="parameter-box">
+    <div class="parameter-title">Range Start Hour/Minute</div>
+    <div class="parameter-details">
+        <strong>Default:</strong> 4:45 (London pre-market)<br>
+        <strong>Purpose:</strong> When the EA begins tracking price ranges<br>
+        <strong>Common Settings:</strong><br>
+        • <strong>London Session:</strong> 4:45-6:30 (tight ranges before volatility)<br>
+        • <strong>New York Session:</strong> 13:30-15:00 (afternoon consolidation)<br>
+        • <strong>Asian Session:</strong> 22:00-00:30 (quieter market periods)
+    </div>
+</div>
+
+<div class="parameter-box">
+    <div class="parameter-title">Range End Hour/Minute</div>
+    <div class="parameter-details">
+        <strong>Default:</strong> 6:30<br>
+        <strong>Purpose:</strong> When range tracking stops and breakout monitoring begins<br>
+        <strong>Recommendation:</strong> Allow 1-3 hours for proper range establishment<br>
+        <strong>Note:</strong> Longer ranges may be more reliable but provide fewer opportunities
+    </div>
+</div>
+
+<h3>Money Management</h3>
+
+<div class="highlight-box">
+    <h4>Position Sizing Method</h4>
+    <p><strong>Use Fixed Lot Size (useFixedLot)</strong></p>
+    <ul>
+        <li><strong>Default:</strong> false</li>
+        <li><strong>Purpose:</strong> Choose between fixed lots or risk-based sizing</li>
+        <li><strong>Recommendation:</strong> Use risk-based for better capital management</li>
+    </ul>
+    
+    <p><strong>Risk Percentage (riskPercent)</strong></p>
+    <ul>
+        <li><strong>Default:</strong> 1.00%</li>
+        <li><strong>Purpose:</strong> Percentage of account balance to risk per trade</li>
+        <li><strong>Conservative:</strong> 0.5-1%</li>
+        <li><strong>Moderate:</strong> 1-2%</li>
+        <li><strong>Aggressive:</strong> 2-3%</li>
+    </ul>
+</div>
+
+<h2 id="neural-network-explained">Neural Network Explained</h2>
+
+<p>The neural network is the core intelligence of Range Brain AI 2.0. It analyzes RSI patterns to determine the quality of breakout signals, significantly reducing false breakouts.</p>
+
+<h3>Core Neural Network Parameters</h3>
+
+<div class="parameter-box">
+    <div class="parameter-title">Number of Nodes (NumNodes)</div>
+    <div class="parameter-details">
+        <strong>Default:</strong> 10<br>
+        <strong>Purpose:</strong> How many past RSI values the network analyzes<br>
+        <strong>Range:</strong> 5-20<br>
+        <strong>Recommendations:</strong><br>
+        • <strong>Short-term patterns:</strong> 5-8 nodes<br>
+        • <strong>Balanced analysis:</strong> 8-12 nodes<br>
+        • <strong>Long-term patterns:</strong> 12-20 nodes<br>
+        <strong>Impact:</strong> More nodes = more data but slower adaptation
+    </div>
+</div>
+
+<div class="parameter-box">
+    <div class="parameter-title">Buy Target Output (BuyTargetOutput)</div>
+    <div class="parameter-details">
+        <strong>Default:</strong> 0.2<br>
+        <strong>Purpose:</strong> Neural network training target for buy signals<br>
+        <strong>Range:</strong> 0.1 to 0.5<br>
+        <strong>Function:</strong> When RSI ≥ 50, network learns to output this value<br>
+        <strong>Higher Values:</strong> Stronger buy signal requirements<br>
+        <strong>Lower Values:</strong> More sensitive buy signal detection
+    </div>
+</div>
+
+<div class="parameter-box">
+    <div class="parameter-title">Sell Target Output (SellTargetOutput)</div>
+    <div class="parameter-details">
+        <strong>Default:</strong> -0.17<br>
+        <strong>Purpose:</strong> Neural network training target for sell signals<br>
+        <strong>Range:</strong> -0.5 to -0.1<br>
+        <strong>Function:</strong> When RSI < 50, network learns to output this value<br>
+        <strong>More Negative Values:</strong> Stronger sell signal requirements<br>
+        <strong>Less Negative Values:</strong> More sensitive sell signal detection<br>
+        <strong>Note:</strong> Different from buy target allows for market asymmetry adaptation
+    </div>
+</div>
+
+<div class="parameter-box">
+    <div class="parameter-title">Learning Rate (LearningRate)</div>
+    <div class="parameter-details">
+        <strong>Default:</strong> 0.71<br>
+        <strong>Purpose:</strong> How quickly the network adapts to new data<br>
+        <strong>Range:</strong> 0.1 to 1.0<br>
+        <strong>Recommendations:</strong><br>
+        • <strong>Stable markets:</strong> 0.3-0.5 (slower learning)<br>
+        • <strong>Volatile markets:</strong> 0.6-0.8 (faster adaptation)<br>
+        • <strong>Experimental:</strong> 0.8-1.0 (rapid learning)<br>
+        <strong>Trade-off:</strong> Higher rates adapt faster but may overfit
+    </div>
+</div>
+
+<div class="parameter-box">
+    <div class="parameter-title">Minimum Signal Threshold (MinSignalThreshold)</div>
+    <div class="parameter-details">
+        <strong>Default:</strong> 0.16<br>
+        <strong>Purpose:</strong> Minimum neural network output strength to generate trades<br>
+        <strong>Range:</strong> 0.05 to 0.3<br>
+        <strong>Impact:</strong><br>
+        • <strong>Lower Values:</strong> More trades, potentially lower quality<br>
+        • <strong>Higher Values:</strong> Fewer trades, higher quality signals<br>
+        <strong>Optimization:</strong> Adjust based on win rate vs frequency needs
+    </div>
+</div>
+
+<h3>How the Neural Network Works</h3>
+<ol>
+    <li><strong>Data Collection</strong>: Gathers the last NumNodes RSI values</li>
+    <li><strong>Normalization</strong>: Converts RSI values to neural network input range (-1 to +1)</li>
+    <li><strong>Processing</strong>: Applies weights and activation functions to generate output</li>
+    <li><strong>MA Enhancement</strong>: Modifies output based on moving average trends</li>
+    <li><strong>Signal Generation</strong>: Compares output to MinSignalThreshold</li>
+    <li><strong>Learning</strong>: Updates weights based on RSI conditions (≥50 = buy target, <50 = sell target)</li>
+</ol>
+
+<h2 id="risk-management-guide">Risk Management Guide</h2>
+
+<h3>Position Sizing Strategy</h3>
+
+<div class="highlight-box">
+    <h4>Risk-Based Sizing (Recommended)</h4>
+    <ul>
+        <li>Set useFixedLot = false</li>
+        <li>Configure riskPercent (0.5-2% recommended)</li>
+        <li>EA automatically calculates lot size based on stop loss distance</li>
+        <li>Maintains consistent dollar risk per trade</li>
+    </ul>
+</div>
+
+<h3>Trade Management Sequence</h3>
+<p>The EA applies risk management features in this order:</p>
+<ol>
+    <li><strong>Position Opening</strong>: Risk-calculated position size</li>
+    <li><strong>Break-Even Move</strong>: Protects against loss when profit reached</li>
+    <li><strong>Partial Close</strong>: Takes partial profits at predetermined level</li>
+    <li><strong>Trailing Stop</strong>: Follows price to maximize profits</li>
+    <li><strong>Take Profit</strong>: Final exit at target level</li>
+</ol>
+
+<h2 id="visual-interface-guide">Visual Interface Guide</h2>
+
+<h3>Range Visualization</h3>
+
+<div class="parameter-box">
+    <div class="parameter-title">Horizontal Lines Color (colorHorizontalLines)</div>
+    <div class="parameter-details">
+        <strong>Default:</strong> White Smoke<br>
+        <strong>Purpose:</strong> Color of range high/low boundary lines<br>
+        <strong>Recommendation:</strong> Use contrasting colors to chart background
+    </div>
+</div>
+
+<div class="parameter-box">
+    <div class="parameter-title">Enable Pulsing Range (enablePulsingRange)</div>
+    <div class="parameter-details">
+        <strong>Default:</strong> true<br>
+        <strong>Purpose:</strong> Animates range lines with color changes<br>
+        <strong>Benefit:</strong> Draws attention to active ranges<br>
+        <strong>Note:</strong> Disable if causing chart performance issues
+    </div>
+</div>
+
+<h2 id="trading-strategy-overview">Trading Strategy Overview</h2>
+
+<h3>Range-Based Trading Concept</h3>
+<p>Range Brain AI 2.0 operates on the principle that markets often establish trading ranges during low-volatility periods, followed by directional breakouts during increased activity.</p>
+
+<h4>Strategy Components</h4>
+<ol>
+    <li><strong>Range Identification</strong>: Monitors price action during specified hours</li>
+    <li><strong>Breakout Detection</strong>: Identifies when price breaks above/below range</li>
+    <li><strong>Signal Validation</strong>: Neural network confirms breakout quality</li>
+    <li><strong>Trade Execution</strong>: Opens position in breakout direction</li>
+    <li><strong>Risk Management</strong>: Applies comprehensive position management</li>
+</ol>
+
+<h3>Session-Specific Considerations</h3>
+
+<table>
+    <tr>
+        <th>Session</th>
+        <th>Time (GMT)</th>
+        <th>Characteristics</th>
+        <th>Recommended Range</th>
+    </tr>
+    <tr>
+        <td>London</td>
+        <td>4:00-8:00</td>
+        <td>Tight ranges before market open, good breakout potential</td>
+        <td>4:45-6:30</td>
+    </tr>
+    <tr>
+        <td>New York</td>
+        <td>13:00-17:00</td>
+        <td>Afternoon consolidation, strong breakouts during NY open</td>
+        <td>13:30-15:00</td>
+    </tr>
+    <tr>
+        <td>Asian</td>
+        <td>22:00-2:00</td>
+        <td>Lower volatility, tighter ranges, smaller moves</td>
+        <td>22:00-00:30</td>
+    </tr>
+</table>
+
+<h2 id="optimization-guidelines">Optimization Guidelines</h2>
+
+<h3>Strategy Tester Configuration</h3>
+
+<div class="highlight-box">
+    <h4>Testing Setup</h4>
+    <ul>
+        <li><strong>Period</strong>: Use at least 1-2 years of data, 5+ years reccommended depending on the timeframe you are analyzing</li>
+        <li><strong>Model</strong>: Every tick based on real ticks (most accurate)</li>
+        <li><strong>Optimization</strong>: Genetic algorithm with 1000+ passes</li>
+        <li><strong>Balance</strong>: Start with $10,000-$50,000 for realistic testing</li>
+    </ul>
+</div>
+
+<h4>Key Metrics to Monitor</h4>
+<ul>
+    <li><strong>Profit Factor</strong>: Target > 1.3</li>
+    <li><strong>Win Rate</strong>: Aim for 45-65%</li>
+    <li><strong>Maximum Drawdown</strong>: Keep < 20% of balance</li>
+    <li><strong>Recovery Factor</strong>: Profit / Max Drawdown > 3.0</li>
+    <li><strong>Sharpe Ratio</strong>: Higher values indicate better risk-adjusted returns</li>
+</ul>
+
+<h3>Parameter Optimization Sequence</h3>
+
+<div class="warning-box">
+    <h4>Phase 1: Basic Setup</h4>
+    <ol>
+        <li>Optimize rangeStartHour/Minute and rangeEndHour/Minute</li>
+        <li>Test riskPercent values (0.5%, 1%, 1.5%, 2%)</li>
+        <li>Adjust stopLossPoints and takeProfitPoints</li>
+    </ol>
+</div>
+
+<div class="warning-box">
+    <h4>Phase 2: Neural Network Tuning</h4>
+    <ol>
+        <li>Optimize RSIPeriod (14, 21, 25, 30)</li>
+        <li>Test NumNodes values (5, 8, 10, 12, 15)</li>
+        <li>Adjust MinSignalThreshold (0.1, 0.15, 0.2, 0.25)</li>
+        <li>Fine-tune LearningRate (0.5, 0.6, 0.7, 0.8)</li>
+    </ol>
+</div>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+
+<h3>Common Issues and Solutions</h3>
+
+<div class="warning-box">
+    <h4>No Trades Being Executed</h4>
+    <p><strong>Possible Causes:</strong></p>
+    <ul>
+        <li>Range not properly established</li>
+        <li>Neural network threshold too high</li>
+        <li>Insufficient margin</li>
+        <li>Market closed or low volatility</li>
+    </ul>
+    <p><strong>Solutions:</strong></p>
+    <ol>
+        <li>Check range formation during specified hours</li>
+        <li>Lower MinSignalThreshold temporarily</li>
+        <li>Verify account margin and EA permissions</li>
+        <li>Enable debug prints to monitor signal generation</li>
+    </ol>
+</div>
+
+<div class="warning-box">
+    <h4>Poor Performance</h4>
+    <p><strong>Possible Causes:</strong></p>
+    <ul>
+        <li>Inappropriate range times for instrument</li>
+        <li>Neural network not adapted to current conditions</li>
+        <li>Risk management too conservative/aggressive</li>
+    </ul>
+    <p><strong>Solutions:</strong></p>
+    <ol>
+        <li>Optimize range times for your trading session</li>
+        <li>Adjust learning rate for faster adaptation</li>
+        <li>Review and optimize risk management parameters</li>
+    </ol>
+</div>
+
+<h3>Debug Mode Operation</h3>
+<p>Enable <strong>EnableDebugPrints = true</strong> to see detailed information:</p>
+<ul>
+    <li>Range establishment progress</li>
+    <li>Neural network output values</li>
+    <li>Signal generation decisions</li>
+    <li>Trade execution details</li>
+    <li>Risk management actions</li>
+</ul>
+
+<h2 id="best-practices">Best Practices</h2>
+
+<h3>Setup and Configuration</h3>
+<ol>
+    <li><strong>Start with Demo</strong>: Always test thoroughly on demo account first</li>
+    <li><strong>Use Default Settings</strong>: Begin with default parameters before optimizing</li>
+    <li><strong>Monitor Closely</strong>: Watch first few days of operation carefully</li>
+    <li><strong>Document Changes</strong>: Keep record of parameter modifications and results</li>
+</ol>
+
+<h3>Risk Management</h3>
+<ol>
+    <li><strong>Conservative Start</strong>: Begin with 0.5-1% risk per trade</li>
+    <li><strong>Gradual Scaling</strong>: Increase risk only after consistent profitability</li>
+    <li><strong>Diversification</strong>: Don't risk more than 10% of portfolio on single EA</li>
+    <li><strong>Stop Loss Discipline</strong>: Never override EA's risk management decisions</li>
+</ol>
+
+<h3>Long-term Success</h3>
+<ol>
+    <li><strong>Patience</strong>: Allow neural network time to adapt and learn</li>
+    <li><strong>Consistency</strong>: Avoid frequent parameter changes</li>
+    <li><strong>Realistic Expectations</strong>: Expect 10-30% annual returns, not overnight riches</li>
+    <li><strong>Continuous Learning</strong>: Stay updated with market conditions and EA performance</li>
+</ol>
+
+<h3>Advanced Configuration Examples</h3>
+
+<div class="code-block">
+<strong>Conservative Setup (Low Risk)</strong>
+riskPercent = 0.5%
+MinSignalThreshold = 0.25
+UsePartialClose = true
+PartialTriggerPoints = 400
+StopMoveToBE = true
+BreakEvenTriggerPoints = 300
+</div>
+
+<div class="code-block">
+<strong>Balanced Setup (Moderate Risk)</strong>
+riskPercent = 1.0%
+MinSignalThreshold = 0.16
+UsePartialClose = true
+PartialTriggerPoints = 600
+UseTrailingStop = true
+TrailingStart = 1000
+</div>
+
+<div class="code-block">
+<strong>Aggressive Setup (Higher Risk)</strong>
+riskPercent = 2.0%
+MinSignalThreshold = 0.10
+LearningRate = 0.8
+UseTrailingStop = true
+TrailingStart = 800
+TrailingStep = 50
+</div>
+
+<div class="footer">
+    <strong>Version:</strong> 2.0<br>
+    <strong>Last Updated:</strong> 2025<br>
+    <strong>Copyright:</strong> Bosco Antonio Vega<br><br>
+    <em>This manual provides comprehensive guidance for Range Brain AI 2.0. Always conduct thorough testing and start with small risk amounts when beginning live trading.</em>
+</div>
+
+</body>
+</html>
