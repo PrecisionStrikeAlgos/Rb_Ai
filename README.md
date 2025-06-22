@@ -1,4 +1,5 @@
-🚀 Usage
+🚀 Usage 🚀
+
 Welcome to the hub for analyzing and refining MT5 trading strategies!
 This repo delivers performance insights, risk modeling, and ready-to-use optimized settings 🧠📊
 
