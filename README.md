@@ -1,48 +1,45 @@
-Usage
+🚀 Usage
+Welcome to the hub for analyzing and refining MT5 trading strategies!
+This repo delivers performance insights, risk modeling, and ready-to-use optimized settings 🧠📊
 
-Backtest Results
-CSV files containing trade-by-trade results
+📁 Included Assets
+📊 MT5 Backtest Results
+Trade-by-trade logs with key performance metrics, exported from MetaTrader 5.
 
-HTML reports with performance metrics
+🎲 Monte Carlo Simulations
+Python-generated simulations based on strategy stats, helping model potential risk and variance.
 
-Equity curve charts in PNG/PDF formats
+🤖 Expert Advisor Set Files (.set)
+Optimized parameter files for MT5 EAs – ready for plug-and-play deployment.
 
-Monte Carlo Simulations
-Random walk simulations based on strategy statistics
+📊 Metrics Tracked
+Each strategy typically includes the following performance and risk metrics:
 
-Risk of ruin calculations
+💰 Total Return %
 
-Probability distribution charts
+📉 Maximum Drawdown
 
-Expert Advisors
-.set files with optimized parameters
+📈 Profit Factor
 
-Documentation for each strategy's logic
+🔎 Sharpe Ratio
 
-Metrics Tracked
-For each strategy, the following metrics are typically included:
+🏆 Win Rate
 
-Total return %
+🧠 Expectancy
 
-Maximum drawdown
+🎯 Monte Carlo Pass Rate
 
-Profit factor
+💣 Risk of Ruin Estimates
 
-Sharpe ratio
-
-Win rate
-
-Expectancy
-
-Monte Carlo pass rate
-
-Risk of ruin estimates
-
-Contribution Guidelines
+🤝 Contribution Guidelines
 This is currently a personal repository.
+Interested in collaborating or reviewing a strategy? Feel free to open an issue! 🛠️
 
-Disclaimer
-All trading strategies involve risk. These backtest results do not guarantee future performance. Use at your own risk.
+⚠️ Disclaimer
+All trading strategies involve risk.
+Backtest and simulation results do not guarantee future performance.
+Use at your own risk. 📉
 
-Contact
-For questions about specific strategies or results, please open an issue in this repository.
+📬 Contact
+For questions about specific strategies, results, or simulations,
+please open an Issue — I'm happy to discuss! 🙌
